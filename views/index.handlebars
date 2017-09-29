@@ -24,12 +24,7 @@
         {{#each burgers}}
             {{#if this.devoured}}
             <li>
-                {{this.name}}
-
-                <form action="/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" name="devour" value="true">
-                <button type="submit">SLEEP TIME!</button>
-                </form>
+                {{this.burger_name}}
 
                 {{!-- {{> burgers/delete-burgers}} --}}
             </li>
