@@ -2,7 +2,7 @@
     <div class="col-sm-3">
         <ul>
         {{#each burgers}}
-            {{#unless this.devour}}
+            {{#unless this.devoured}}
             <li>
                 {{this.burger_name}}
 
@@ -22,7 +22,7 @@
     </div>
     <div class="col-sm-3">
         {{#each burgers}}
-            {{#if this.devour}}
+            {{#if this.devoured}}
             <li>
                 {{this.name}}
 
@@ -33,7 +33,7 @@
 
                 {{!-- {{> burgers/delete-burgers}} --}}
             </li>
-            {{/unless}}
+            {{/if}}
         {{/each}}
     </div>
 </div>

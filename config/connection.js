@@ -18,7 +18,7 @@ connection.connect(function(err) {
         return;
     }
     console.log("Connected as ID: ", connection.threadId);
-    console.log("Connected to Port: ",connection.port);
+    console.log("Connected to Port: 8080");
 });
 
 module.exports = connection;
