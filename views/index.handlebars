@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="col-sm-3">
+        <ul>
+        {{#each burgers}}
+            {{#unless this.devour}}
+            <li>
+                {{this.burger_name}}
+
+                <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devour" value="false">
+                <button type="submit">EAT ME!</button>
+                </form>
+
+                {{!-- {{> burgers/delete-burger}} --}}
+            </li>
+            {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
+    <div class="col-sm-3">
+        <h1>BURGERS<br/>< EAT<br/>EATEN ></h1>
+    </div>
+    <div class="col-sm-3">
+        {{#each burgers}}
+            {{#if this.devour}}
+            <li>
+                {{this.name}}
+
+                <form action="/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devour" value="true">
+                <button type="submit">SLEEP TIME!</button>
+                </form>
+
+                {{!-- {{> burgers/delete-burgers}} --}}
+            </li>
+            {{/unless}}
+        {{/each}}
+    </div>
+</div>
