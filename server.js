@@ -8,7 +8,7 @@ var port = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(expres.static("public"));
+app.use(express.static("public"));
 
 app.use(methodOverride("_method"));
 

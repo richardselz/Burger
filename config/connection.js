@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
     user: "root",
     password: "somepassword",
     port: 3306,
-    database: "burgers"
+    database: "burgers_db"
 })};
 
 connection.connect(function(err) {

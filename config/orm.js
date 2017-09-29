@@ -32,7 +32,7 @@ var orm = {
         });
     },
     insertOne: function(table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table+" ("+cols.toString()+") VALUES ("+printQuestionMarks(vals.length)+");");
+        var queryString = "INSERT INTO " + table+" ("+cols.toString()+") VALUES ("+printQuestionMarks(vals.length)+");";
         console.log(queryString);
 
         connection.query(queryString, vals, function(err, res) {
@@ -51,7 +51,7 @@ var orm = {
     deleteOne: function(table, condition, cb) {
         var queryString = "DELETE FROM "+table+" WHERE "+condition+";";
         console.log(queryString);
-        connection.query(queryString, funciton(err,res) {
+        connection.query(queryString, function(err,res) {
             if(err) throw err;
             cb(res);
         });
